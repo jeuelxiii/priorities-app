@@ -1,0 +1,19 @@
+<div class="container mt-3">
+    <form [formGroup]="newList" (ngSubmit)="addItem()">
+        <input formControlName="title" name="title" id="title" class="mx-2" placeholder="Add the title.." required>
+        <!-- <select formControlName="type" name="list" id="type" class="mx-2" size="1" multiple>
+            <option *ngFor="let option of options" [ngValue]="option.value">{{option.name}}</option>
+          </select> -->
+          <button type="submit" class="btn btn-info mx-2">Add</button>
+          <br>
+        <input type="radio" class="mx-2" formControlName="type" id="movie" name="type" value="movie">
+        <label for="">Movie</label><br>
+        <input type="radio" class="mx-2" formControlName="type" id="series" name="type" value="series">
+        <label for="">Series</label><br>
+
+
+    </form>
+    <div class="mt-3">
+        <app-list-items *ngFor="let list of lists" [list]="list"></app-list-items>
+    </div>
+</div>

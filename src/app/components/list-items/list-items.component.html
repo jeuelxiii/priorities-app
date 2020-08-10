@@ -1,0 +1,10 @@
+    <div class="container bg-info text-white" [class.isCompleted]="isCompleted">
+        <input type="checkbox" name="list" (click)="onToggle(list)">
+        <strong>
+            {{ list.title | uppercase }}
+        </strong>
+        <span>
+            "{{ list.type | lowercase }}"
+        </span>
+        <button (click)="deleteItem($event, list)" class="close text-white">X</button>
+    </div>

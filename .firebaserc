@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "watching-app-9907c": {
+      "hosting": {
+        "watching-app": [
+          "watching-app-9907c"
+        ]
+      }
+    }
+  }
+}
