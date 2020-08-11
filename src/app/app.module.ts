@@ -10,13 +10,17 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AboutAppComponent } from './about-app/about-app.component';
+import { HowToUseComponent } from './how-to-use/how-to-use.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     ListItemsComponent,
-    AboutAppComponent
+    AboutAppComponent,
+    HowToUseComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,13 @@ import { AboutAppComponent } from './about-app/about-app.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
     AngularFirestoreModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

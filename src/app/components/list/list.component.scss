@@ -1,0 +1,34 @@
+.btn{
+    border: black 2px solid;
+    border-radius: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    box-shadow: 2px 1px 1px black;
+}
+
+#title {
+    border-radius: 5px;
+}
+
+label{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 1em;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+#urgent-important{
+    color: #c90000;
+}
+
+#urgent{
+    color: #faa019;
+}
+
+#important{
+    color: #f2df0a;
+}
+
+@import '~ngx-toastr/toastr';

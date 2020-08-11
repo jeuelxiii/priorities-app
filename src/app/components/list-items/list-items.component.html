@@ -1,10 +1,8 @@
-    <div class="container bg-info text-white" [class.isCompleted]="isCompleted">
+    <div class="container my-1 animate__animated animate__fadeIn delay-1s" [ngStyle]="{'background-color':getColor(list.type)}">
         <input type="checkbox" name="list" (click)="onToggle(list)">
-        <strong>
-            {{ list.title | uppercase }}
+        <strong [class.isCompleted]="isCompleted">
+            {{ list.title }}
         </strong>
-        <span>
-            "{{ list.type | lowercase }}"
-        </span>
-        <button (click)="deleteItem($event, list)" class="close text-white">X</button>
+
+        <button (click)="deleteItem($event, list)" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></button>
     </div>

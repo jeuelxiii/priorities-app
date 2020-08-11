@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "watching-app": {
+    "priorities-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/watching-app",
+            "outputPath": "dist/priorities-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -29,7 +29,9 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/animate.css/animate.min.css"
             ],
             "scripts": []
           },
@@ -67,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "watching-app:build"
+            "browserTarget": "priorities-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "watching-app:build:production"
+              "browserTarget": "priorities-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "watching-app:build"
+            "browserTarget": "priorities-app:build"
           }
         },
         "test": {
@@ -115,11 +117,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "watching-app:serve"
+            "devServerTarget": "priorities-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "watching-app:serve:production"
+              "devServerTarget": "priorities-app:serve:production"
             }
           }
         },
@@ -130,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "watching-app"
+  "defaultProject": "priorities-app"
 }

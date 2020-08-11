@@ -1,15 +1,20 @@
-<div class="container mt-3">
+<div class="container mt-3 container my-1 animate__animated animate__fadeIn">
     <form [formGroup]="newList" (ngSubmit)="addItem()">
-        <input formControlName="title" name="title" id="title" class="mx-2" placeholder="Add the title.." required>
+        <input formControlName="title" name="title" id="title" class="mx-2" placeholder="Add a task.." required>
         <!-- <select formControlName="type" name="list" id="type" class="mx-2" size="1" multiple>
             <option *ngFor="let option of options" [ngValue]="option.value">{{option.name}}</option>
           </select> -->
-          <button type="submit" class="btn btn-info mx-2">Add</button>
+          <button type="submit" class="btn btn-light mx-2">Add</button>
           <br>
-        <input type="radio" class="mx-2" formControlName="type" id="movie" name="type" value="movie">
-        <label for="">Movie</label><br>
-        <input type="radio" class="mx-2" formControlName="type" id="series" name="type" value="series">
-        <label for="">Series</label><br>
+          <div id="radio" class="m-3 pt-1">
+              <input type="radio" class="mx-2" formControlName="type" name="type" value="urgent-important">
+              <label id="urgent-important" for="">Urgent and Important</label><br>
+              <input type="radio" class="mx-2" formControlName="type"  name="type" value="urgent">
+              <label id="urgent" for="">Urgent</label><br>
+              <input type="radio" class="mx-2" formControlName="type"  name="type" value="important">
+              <label id="important" for="">Important</label><br>
+          </div>
+        <br>
 
 
     </form>

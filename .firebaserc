@@ -1,9 +1,16 @@
 {
   "targets": {
-    "watching-app-9907c": {
+    "priorities-app": {
       "hosting": {
-        "watching-app": [
-          "watching-app-9907c"
+        "priorities-app": [
+          "priorities-app"
+        ]
+      }
+    },
+    "priorities-app": {
+      "hosting": {
+        "priorities-app": [
+          "priorities-app"
         ]
       }
     }

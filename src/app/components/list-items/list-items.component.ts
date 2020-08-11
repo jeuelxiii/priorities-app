@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./list-items.component.scss']
 })
 export class ListItemsComponent implements OnInit {
-
+lists: Items[];
 @Input() public list;
 
 public isCompleted: boolean = false;
@@ -17,7 +17,10 @@ public isCompleted: boolean = false;
   constructor(private listService: ListService) { }
 
   ngOnInit(): void {
-    
+    // let list$ = this.listService.list;
+    // list$.subscribe(data => {  
+    //   this.lists = data;
+    // });
   }
 
   onToggle(list){
@@ -29,6 +32,17 @@ public isCompleted: boolean = false;
   deleteItem(event, list){
     console.log('deleted')
     this.listService.deleteItem(list);
+  }
+
+  getColor(type) {
+    switch (type) {
+      case 'urgent-important':
+        return '#c90000';
+      case 'urgent':
+        return '#faa019';
+      case 'important':
+        return '#f2df0a';
+    }
   }
 
 }
